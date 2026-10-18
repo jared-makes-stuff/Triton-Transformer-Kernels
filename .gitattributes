@@ -5,5 +5,7 @@ benchmarks/torch_transformer_benchmark.py -text
 benchmarks/tensorflow_transformer_benchmark.py -text
 # Retained evidence manifests hash raw bytes, including their original newlines.
 docs/results/*.json -text
+# Preserve raw bytes for generated figures recorded in evidence manifests.
+docs/assets/*.svg -text
 # The compiler wrapper is executed by bash in Linux/WSL checkouts.
 tools/triton-cc text eol=lf

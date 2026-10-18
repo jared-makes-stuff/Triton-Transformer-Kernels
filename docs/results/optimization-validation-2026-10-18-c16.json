@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "record_type": "observed local optimization validation",
+  "status": "COMPLETE",
+  "date_local": "2026-10-18",
+  "timezone": "Asia/Singapore",
+  "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5",
+  "tests": [
+    {
+      "name": "tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "environment": {},
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5",
+      "exit_code": 0,
+      "duration_seconds": 32.9667025000017,
+      "passed": 301,
+      "warnings": 14
+    },
+    {
+      "name": "cpu-tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5",
+      "exit_code": 0,
+      "duration_seconds": 4.889215800001693,
+      "passed": 146,
+      "skipped": 155
+    },
+    {
+      "name": "compileall",
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "transformer_opt",
+        "benchmarks",
+        "tests",
+        "tools"
+      ],
+      "environment": {},
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5",
+      "exit_code": 0,
+      "duration_seconds": 0.10950270000466844
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-final.json",
+      "sha256": "6a19e9fb4e0e15e37ae0a118dccf41d15642942fc048022d1717d6ec3d96ca79",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-final-confirmation.json",
+      "sha256": "a92673502a257e9a37ef46fe2f5a98a88cfa8a7b86ad0740e190f34f4f712e2d",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-replay-validation-ab.json",
+      "sha256": "699a32527c6f449121ac35ead9cb4d530356f05d54654ba153fc0300eb2784d8",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-norm-ab.json",
+      "sha256": "43acd9010bc253033ef4ca578c2f7a416d3be97ef2d7cad5f2f5e33b3edf3c26",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-graph-ab.json",
+      "sha256": "999134709c52945eb561f0033f657a21b88a3393dedb291eb3be4bedfe99550b",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-heldout.json",
+      "sha256": "4fd221138bd736a38e83460d35e0ced9f549f4d1468525c68570e67685aa6b17",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-source-derived.json",
+      "sha256": "6c088a35a912f25aeae6b20872436ca88b1a35503bd594747503933e3a26cea5",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-row05-profile.json",
+      "sha256": "93643a28a95e30d5a0fdd03f7ba949b945ff8acfb8f163a704f87adb04688cb0",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-row06-profile.json",
+      "sha256": "504475c3b1b74781260b469ad87f29c1a091e86f0934f1c80e33dfd3d4510175",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-row07-profile.json",
+      "sha256": "a4cdbc93adf712e2d3ab40a7a12a56f4092d667e7c03e4d99e2182e8d64b7690",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-row09-profile.json",
+      "sha256": "a280ce022850ab9ec5b827a537ca172cbe02f5f158cb90e7ab3c3d9d2bd68e89",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-row11-profile.json",
+      "sha256": "6b25e3d0140e553b21f1cc2b33155b5317b23aa974ff76a7ee94ea7314a3eb37",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-row13-profile.json",
+      "sha256": "b85f4cfb4e11d501f90a53785dd47c711dbfaeb7311e751dfa88af97d9d2e860",
+      "implementation_sha256": "5bcf25d733d92d571d4531194e9b92fd0a8d3d16a74c72659b5413ca03836dc5"
+    }
+  ],
+  "research_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c16-component-screens.json",
+      "sha256": "29982bc1b899793841d9ba814218cb6741ed95adebf3f6388a04d8d462433a9b",
+      "selected_production_evidence": false,
+      "records": 8,
+      "embedded_exact_source_versions": 5
+    }
+  ],
+  "preserved_campaign15_artifacts": [
+    {
+      "path": "docs/results/optimization-validation-2026-10-18-c15.json",
+      "sha256": "dd734b80f1546be2c6c7768d871bfe35ad0ead18f7ad61372f8c02a788705e26"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-component-screens.json",
+      "sha256": "7246e75bb89c3c82484e4ade558364895c8370b1e47ab81e079ca6bfaee2a5b6"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-final-confirmation.json",
+      "sha256": "52cc3e7f2b5b1a21658c1ef56759061424be280f6dda4de0c5cf1b6838761e03"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-final.json",
+      "sha256": "623ffda64ae729a2a7f681d077c7cccb28a16197e8624ce66831ffe572646a69"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-graph-ab.json",
+      "sha256": "6c8965b474b1227ce7c5c22e143542aaf08580404d1f6294f7cbbe19c295e73b"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-heldout.json",
+      "sha256": "0fff46b62280f30ea46e1c06f4617f9bf11093c766c1ec4ad4242e5b3968f974"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-norm-ab.json",
+      "sha256": "42cf539f0cfd0b5e2fe76c145d38bc3423c74f4f61f20935caf51c452a4fd298"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row05-profile.json",
+      "sha256": "3626daaebd524795832868dc116038bab28592ccf3a61bb5bece0ea95b849beb"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row06-profile.json",
+      "sha256": "9238bd330391d05e493424a074154741788803d8727a5fed953ef5a78277a391"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row07-profile.json",
+      "sha256": "b46fe9bd9f786f8510350dac235df506741f20ba73f339b6090705dbf2e1372b"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row09-profile.json",
+      "sha256": "0061b901c8b51f30818b61d9d4c0c7361aa35331b7b22aecda03828b6d401ede"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row11-profile.json",
+      "sha256": "f2d3c2c3f2514d557ef6aa8495b1566e6d26bae626a9e4889760a92b1cce0e13"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row13-profile.json",
+      "sha256": "dce597c0a3186b07818773c7715f363624e6207b5276b0cf5d515d0a9a9bfef3"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-source-derived.json",
+      "sha256": "37bfd18365aa07afe8420048f8ce5e91f86ed381b26a884d715dc70bddad6c66"
+    }
+  ],
+  "reference_checkout_integrity": {
+    "status": "PASS",
+    "sha256": {
+      "benchmarks/torch_transformer_benchmark.py": "5529c96a80799b51f68092e1444a30b17994554dffdf52da98ba701489a7f36e",
+      "benchmarks/tensorflow_transformer_benchmark.py": "00e99b6e1d19e961039b66eb3d3c055b36cc50f0436da2558f5f1fbe292ef798"
+    }
+  },
+  "tooling_and_test_normalized_text_sha256": {
+    "benchmarks/compare_replay_validation.py": "7422fd5f53afc3fc5d204ab1f4d12a7a55d4124c86343ba6206f84cefdbeb218",
+    "benchmarks/experiments/c16_candidates.py": "9fb62a1595abf4fbd49dc4e786d84315cdc4c06db85b0ce833be428c681626d3",
+    "benchmarks/experiments/c16_screen.py": "de8b35a5dc48eb3fa7472ecae2db8ecd385bcc916235e23a937110c7daefb733",
+    "benchmarks/experiments/c16_ffn_stress.py": "835c1e818681b13c710d96af8a78aaec1ab9f327f6bfe50aead44a42e6534951",
+    "benchmarks/experiments/c16_replay_cost.py": "aca0a263105b8d6fdce1cc52a6a6e3362be8f8a38230aeb0f491682c015ca182",
+    "tests/test_replay_validation.py": "d994aa38965f9a2ec4842db776e870de7dc53229d104f13a6f88d9337f806afb",
+    "tests/test_publication_evidence.py": "c3e80306a0f48d6e01537d23ad2754eac003248042097da7758a2f55b7ee0a94",
+    "tests/test_inference_experiments.py": "d550f67dfc73d83c588a948e39f6a3ea87562165c60fa1b4fba596a96ca0b24f"
+  },
+  "validation_summary": {
+    "final_pair": {
+      "passed_per_run": 13,
+      "authorized_resource_skip_per_run": 1,
+      "compared_elements_per_run": 938885120,
+      "failed_elements_per_run": 0,
+      "geometric_mean_speedups": [
+        4.189651158146938,
+        4.170245959789408
+      ]
+    },
+    "heldout": {
+      "passed": 7
+    },
+    "source_derived": {
+      "passed": 28,
+      "authorized_resource_skip": 1,
+      "compared_elements": 459776000,
+      "failed_elements": 0
+    },
+    "accepted_change": "One live ordered/deduplicated validation traversal on the same eight replay shapes; no kernel math changes",
+    "validation_ab": {
+      "shapes": 8,
+      "accuracy_inputs_per_shape": 8,
+      "raw_samples_per_variant_per_shape": 320,
+      "rounds": 4,
+      "bitwise_equal_to_prior": true,
+      "same_signature_fields": true,
+      "whole_model_ratios": {
+        "final-01-b64-d128-h4-s128": 1.0,
+        "final-02-b1-d128-h4-s128": 1.658823552848633,
+        "final-03-b4-d128-h4-s128": 1.6379871789871487,
+        "final-04-b16-d128-h4-s128": 1.0000762901722986,
+        "final-07-b64-d32-h4-s128": 1.163760431924664,
+        "final-09-b64-d128-h1-s128": 1.0001182107775208,
+        "final-10-b64-d128-h2-s128": 0.9995114607833864,
+        "final-12-b64-d128-h4-s32": 1.2203992087242999
+      },
+      "known_stress_failure_counts_retained": true
+    },
+    "profiler_expectations": {
+      "passed": 6,
+      "rows": [
+        5,
+        6,
+        7,
+        9,
+        11,
+        13
+      ],
+      "short_norm_launches_row7": 27
+    },
+    "figure": {
+      "path": "docs/assets/final-speedups.svg",
+      "status": "regenerated and visually inspected",
+      "sha256": "2b9a6cc4f7eff68fe467692de71d8dd6c1958acb7136235cc795a9dbe8e686e2"
+    }
+  },
+  "target": {
+    "metric": "13-row geometric-mean end-to-end speedup versus unchanged explicit PyTorch attention",
+    "requested": 10.0,
+    "achieved": false
+  },
+  "review": {
+    "roles": "Primary agent sequential requirements, architecture, implementation, QA, privacy, documentation and adversarial review; no delegated review claimed.",
+    "decisions": [
+      "Accept validation-only change: every former state field remains live, one traversal, same ordered signature and bitwise outputs.",
+      "Input copies, fresh clones, host lock and CUDA completion ordering remain inside the actual replay path.",
+      "Reject all fused FFN kernels after stronger independent-weight stress, despite initial passes and row-7 timing gains.",
+      "Unchecked graph replay is only a diagnostic upper bound and is never selectable.",
+      "Retain pre-existing selected row-7 failures under some other quarter/eighth-scale weight seeds; this change is not a numerical repair.",
+      "Use counterfactual whole-forward A/B for attribution; aggregate windows also include baseline/workstation variation."
+    ],
+    "test_changes": [
+      {
+        "reason": "C15 current-source assertions became historical after C16 replay changes.",
+        "replacement": "Fresh C16 final/replay/normalization/validation/profiler evidence, immutable C15 hashes and rejected-stress provenance.",
+        "reviewer": "Primary agent review",
+        "proof": "Passing full GPU-available and CUDA-hidden suites."
+      },
+      {
+        "reason": "The first recapture fixture assigned inference tensors, which must bypass capture.",
+        "replacement": "Ordinary replacement tensors exercise recapture; a separate inference-parameter rejection test remains.",
+        "reviewer": "Primary agent review",
+        "proof": "Focused 49-test suite and full suites pass; no product change was needed."
+      }
+    ],
+    "scope": "One production Python file changed; runtime dependencies, parameters, state-dict keys, kernels, comparator and skip policy unchanged."
+  },
+  "observed_nonpassing_checks": [
+    {
+      "kind": "prototype signature assertion",
+      "result": "FAIL",
+      "resolution": "Compare old/new collectors on the same model, rather than different models with different storage identities."
+    },
+    {
+      "kind": "GPU storage-recapture fixture",
+      "result": "1 failed, 48 passed",
+      "resolution": "Use ordinary replacement tensors for recapture; preserve inference-tensor fallback coverage."
+    },
+    {
+      "kind": "fused FFN stronger stress",
+      "result": "FAIL",
+      "resolution": "Reject all FFN fusion; retain 32-input stress and original source versions."
+    }
+  ],
+  "limitations": [
+    "10x aggregate target remains unmet; two small cases exceeding 10x do not satisfy it.",
+    "Other shapes are near parity or gain less; the measured A/B includes a small near-parity regression on row 10.",
+    "Baseline/workstation timing varies between runs and campaigns.",
+    "Pre-existing quarter/eighth-scale failures with other weights remain, including selected row 7. No general accuracy repair or universal numerical guarantee.",
+    "The 100000-token resource row remains an authorized non-pass skip.",
+    "Steady-state timing excludes setup/capture and includes copies, clones, state checks and GPU work. All GPU jobs ran sequentially.",
+    "Local uncommitted work only; no branch, commit, push, deployment, publication or external durable memory write."
+  ],
+  "hygiene": {
+    "command": [
+      "python",
+      "tools/check_publication.py"
+    ],
+    "exit_code": 0,
+    "checked_candidates": 1267,
+    "findings": 0,
+    "scope": "Local Markdown links and common credential patterns; not a comprehensive security audit."
+  }
+}

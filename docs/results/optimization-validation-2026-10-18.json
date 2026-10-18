@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "record_type": "observed local optimization validation",
+  "status": "COMPLETE",
+  "date_local": "2026-10-18",
+  "timezone": "Asia/Singapore",
+  "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868",
+  "tests": [
+    {
+      "command": "python -m pytest tests -q",
+      "device_visibility": "normal",
+      "exit_code": 0,
+      "passed": 231,
+      "warnings": 14,
+      "duration_seconds": 32.46
+    },
+    {
+      "command": "python -m pytest tests -q",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "exit_code": 0,
+      "passed": 121,
+      "skipped": 110,
+      "skip_reason": "GPU/Triton tests require visible CUDA",
+      "duration_seconds": 5.45
+    },
+    {
+      "command": "python -m compileall -q transformer_opt benchmarks tests tools",
+      "exit_code": 0
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-final-confirmation.json",
+      "sha256": "70da89b0184ca632bc13aea0b216d66e3ed927986c1b0e0d6dcedb17745a8fd5",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-final.json",
+      "sha256": "9b1a3c23c3b48f8d4608c8d3289d372a6486ffe65927a6276b6e3b6e01c6bfb2",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-graph-ab.json",
+      "sha256": "1d159af9ff7593e397fe0cf6adb0fbd10faeaaf3451c5a3d795880d41936843d",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-heldout.json",
+      "sha256": "334584e92b3f7e0f57a1f184887d550a74d566d6f2d3a25ad843c6d89c8fe76c",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-precision-ab.json",
+      "sha256": "f39b97df0e7ee75891fda4ddb41f42a146fe8811a337e6cef5f58da5bfed32a8",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-row05-profile.json",
+      "sha256": "f329a1302976cdd9e1cbe08dae7fcac89e1e9547bed67b8f55d4ea01222a5133",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-row06-profile.json",
+      "sha256": "71076641347ae6876be6046557e937c1409377ce0b8a79c780f4fa568274e6ed",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-row09-profile.json",
+      "sha256": "a1ec344691cc887e27094de4ac8999c3bd6eae62675168f3b135fbba84e40bc9",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-row11-profile.json",
+      "sha256": "30a4f020b28874fbe08064badea4c0955e3f1a05e3a04ca0ceac031c93f0e9fd",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-row13-profile.json",
+      "sha256": "d9431616b19e92f65f3e28547386ce1fb05830025e88c8e7c3753e1b66e8874e",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c13-source-derived.json",
+      "sha256": "c4bb8be198a818fc02a25a70ac084fd4378c4186bfead347f569039f804a8111",
+      "implementation_sha256": "de8b6dd8831cb8637ac49cf8f2acfdcf69219e2cb9c303f60af81d123f34e868"
+    }
+  ],
+  "target": {
+    "metric": "geometric-mean speedup over 13 executable final cases",
+    "target_speedup": 10.0,
+    "achieved": false,
+    "measured_runs": [
+      4.1865140037207595,
+      3.7443979932637963
+    ]
+  },
+  "review": {
+    "method": "single-agent multi-perspective source review plus executable regressions",
+    "independent_agent_review": false,
+    "reproduced_findings": [
+      "Inference-mode static buffers failed under a later no_grad forward.",
+      "Changing attention scale reused stale captured math."
+    ],
+    "regression_command_before_fix": "python -m pytest tests/test_cuda_graph_inference.py -q -k \"context_changes or configuration_change\"",
+    "regression_result_before_fix": {
+      "failed": 2,
+      "exit_code": 1
+    },
+    "focused_command_after_fix": "python -m pytest tests/test_cuda_graph_inference.py -q",
+    "focused_result_after_fix": {
+      "passed": 7,
+      "exit_code": 0
+    },
+    "pre_review_artifact_directory": "results/c13-pre-review",
+    "pre_review_implementation_sha256": "14b0d53ea01e90891ae46de2a9c1e85c92a8d534526977bf7fc99ed4b57ab0ed",
+    "pre_review_artifacts_modified": false
+  },
+  "limitations": [
+    "10x aggregate target is not achieved; peak per-row speedup is not repeatably 10x.",
+    "Substantial timing variability; the unchanged huge-batch row is slower than baseline in both selected final runs.",
+    "Replay retains additional buffers and vendor workspace; capture is setup but copies, clones, and checks remain timed.",
+    "No commit, branch, push, deploy, or external publication was requested or performed."
+  ],
+  "hygiene": {
+    "command": "python tools/check_publication.py",
+    "exit_code": 0,
+    "checked_candidates": 1206,
+    "findings": 0,
+    "scope": "Local Markdown targets and common credential literals; not a comprehensive security audit."
+  },
+  "reference_checkout_integrity": {
+    "status": "PASS",
+    "sha256": {
+      "benchmarks/torch_transformer_benchmark.py": "5529c96a80799b51f68092e1444a30b17994554dffdf52da98ba701489a7f36e",
+      "benchmarks/tensorflow_transformer_benchmark.py": "00e99b6e1d19e961039b66eb3d3c055b36cc50f0436da2558f5f1fbe292ef798"
+    }
+  },
+  "pre_review_byte_integrity": {
+    "status": "PASS",
+    "checked_artifacts": 11,
+    "directory": "results/c13-pre-review"
+  },
+  "validation_summary": {
+    "final_pair": {
+      "passed_per_run": 13,
+      "authorized_resource_skip_per_run": 1,
+      "compared_elements_per_run": 938885120,
+      "failed_elements_per_run": 0
+    },
+    "heldout": {
+      "passed": 7
+    },
+    "source_derived": {
+      "passed": 28,
+      "authorized_resource_skip": 1,
+      "compared_elements": 459776000,
+      "failed_elements": 0
+    },
+    "profiler_expectations": {
+      "passed": 5,
+      "rows": [
+        5,
+        6,
+        9,
+        11,
+        13
+      ]
+    }
+  }
+}

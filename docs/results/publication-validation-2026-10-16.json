@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "record_type": "observed local validation and review summary",
+  "date_local": "2026-10-16",
+  "timezone": "Asia/Singapore",
+  "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad",
+  "tests": [
+    {
+      "command": "python -m pytest tests -q",
+      "device_visibility": "normal",
+      "exit_code": 0,
+      "passed": 215,
+      "warnings": 14,
+      "duration_seconds": 99.27
+    },
+    {
+      "command": "python -m pytest tests -q",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "exit_code": 0,
+      "passed": 111,
+      "skipped": 104,
+      "skip_reason": "GPU/Triton tests require visible CUDA",
+      "duration_seconds": 5.52
+    },
+    {
+      "command": "python -m compileall -q transformer_opt benchmarks tests tools",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/test_colab_notebook.py tests/test_organizer_benchmarks.py tests/test_publication_evidence.py -q",
+      "exit_code": 0,
+      "passed": 24,
+      "duration_seconds": 1.55
+    }
+  ],
+  "hygiene": {
+    "command": "python tools/check_publication.py",
+    "exit_code": 0,
+    "findings": 0,
+    "scope": "Common credential literals and local Markdown link targets; not a comprehensive security audit."
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-final-confirmation.json",
+      "sha256": "56f0f4527538953c5bcb5f89354cc349c616cdeb1a2234a45992a040401d27dd",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-final.json",
+      "sha256": "d9c48ce43825a86b9b23f169241a46325d45d678b140e291289b10b9961b59dc",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-heldout.json",
+      "sha256": "edb3c39c6464e18332274aba2298c424a6f321b799588e3a136e6978c2d444e9",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-row05-profile.json",
+      "sha256": "ce0d7b11c0d32c66b73153a5a58d9742e60cc2b6c68e07eaa5bee392ccfea205",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-row06-profile.json",
+      "sha256": "dc4d99d55f25dbc5cc83d62979b465ca5b5e47df953ec574ff2e6a207d512536",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-row09-profile.json",
+      "sha256": "6c862c745cfee7a2ca8746f5dc91109c536a89b551d521f3216c2ccbe6cb0c2f",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-row11-profile.json",
+      "sha256": "2d1e7f6031a39f66da2b263a25c1ff888e7bdb291c3f82841bafeb8f271cae55",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-row13-profile.json",
+      "sha256": "df1e2480ac81505df9da4f75e070d11f97359e521c8a5c3d306b9d9928ba22e9",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-c12-source-derived.json",
+      "sha256": "8f979ba7c5114bfdfd74c40a65cb5ffe4dccf477f1516031f3fb9f95123a95d9",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-frontier-confirmation.json",
+      "sha256": "11aa9ef5e5fd1da5b3e678beb6eca81e07a78cb4fd5cb228b4fcaeaab7a605e8",
+      "implementation_sha256": "a186b679885e9e787b3deba0ad710855ae4c2486ae491b53e4e64bfa13e7f9cf"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-frontier-large-cases.json",
+      "sha256": "e5829fe38034f6888c14556ad8723857909a804f5d3df589e89f523eee6fd28a",
+      "implementation_sha256": "abb639ce7fa68c9af9f21d776ca3d3afaa9e8f22be7e0ae8116ec4f71068c5ad"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-frontier-screen.json",
+      "sha256": "7536cb80f27bb690be4f5257d03dc94e73e1be6e5cdfdb090fab133a4b21bcd6",
+      "implementation_sha256": "a186b679885e9e787b3deba0ad710855ae4c2486ae491b53e4e64bfa13e7f9cf"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-16-publication-control-final.json",
+      "sha256": "121954b75ec800f3fb980ce926a796cb03ea266e58b8f33dfb8cbfa76f90db80",
+      "implementation_sha256": "a186b679885e9e787b3deba0ad710855ae4c2486ae491b53e4e64bfa13e7f9cf"
+    }
+  ],
+  "review": {
+    "mode": "single-agent multi-perspective review plus automated verification; no independent-agent approval claimed",
+    "perspectives": {
+      "requirements": "Strict OR comparator, all feasible published shapes, unchanged frozen references and state-dict compatibility.",
+      "architecture": "Production change is exactly one causal loop bound; no API, dispatch, dtype, or dependency change.",
+      "implementation": "A/B temporary modules preserve current dispatch; output creation is exclusive; full-mask and boundary regressions covered.",
+      "security_privacy": "Publication candidates checked for common credential literals; local secret files ignored; Colab URL validates github.com without embedded credentials.",
+      "qa": "215 CPU/GPU tests pass; CPU-hidden run 111 pass and 104 expected GPU skips; final pair, held-out, source-derived and profiler gates pass.",
+      "docs": "Current and historical evidence separated; source identities retained; figure shows repeated ranges and row-6 regression.",
+      "devils_advocate": "Large-batch timing is unstable and not a stable optimization claim; only the row-13 A/B gain is consistently positive across every round."
+    }
+  },
+  "limitations": [
+    "Row-6 latency varies substantially; one full matrix run is slower than its explicit baseline.",
+    "GitHub Actions Linux job was added but not executed remotely. Local CPU-hidden validation uses the Windows CUDA wheel.",
+    "Colab notebook syntax/pin validated locally; remote cloning requires publication of the matching source.",
+    "No commits, branch creation, pushes, external publication, portfolio website edits, or persistent memory writes."
+  ],
+  "reference_checkout_integrity": {
+    "command": "git check-attr text -- benchmarks/torch_transformer_benchmark.py benchmarks/tensorflow_transformer_benchmark.py",
+    "result": "text unset for both files; raw bytes preserved across checkout platforms"
+  }
+}

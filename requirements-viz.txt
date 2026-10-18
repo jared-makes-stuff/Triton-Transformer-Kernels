@@ -1,0 +1,2 @@
+# Optional figure generation only; not a runtime or benchmark dependency.
+matplotlib==3.11.2

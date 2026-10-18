@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "record_type": "observed local optimization validation",
+  "status": "COMPLETE",
+  "date_local": "2026-10-18",
+  "timezone": "Asia/Singapore",
+  "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992",
+  "tests": [
+    {
+      "name": "rounded-profile",
+      "command": [
+        "python",
+        "benchmarks/profile_cases.py",
+        "--manifest",
+        "benchmarks/campaign8_profile_shapes.json",
+        "--case",
+        "final-07-b64-d32-h4-s128",
+        "--dtype",
+        "float32",
+        "--attention-backend",
+        "auto",
+        "--expect-backend",
+        "triton",
+        "--steps",
+        "3",
+        "--out",
+        "docs/results/rtx-5070-ti-2026-10-18-c14-row07-profile.json"
+      ],
+      "environment": {},
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992",
+      "exit_code": 0,
+      "duration_seconds": 3.0877811000009387
+    },
+    {
+      "name": "historical-precision-smoke",
+      "command": [
+        "python",
+        "benchmarks/compare_attention_precision.py",
+        "--repeats",
+        "2",
+        "--rounds",
+        "2",
+        "--out",
+        "results/c14-historical-precision-smoke-final.json"
+      ],
+      "environment": {},
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992",
+      "exit_code": 0,
+      "duration_seconds": 5.773718899999949
+    },
+    {
+      "name": "tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "environment": {},
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992",
+      "exit_code": 0,
+      "duration_seconds": 77.49796950000018,
+      "passed": 262,
+      "skipped": 0,
+      "warnings": 14
+    },
+    {
+      "name": "cpu-tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992",
+      "exit_code": 0,
+      "duration_seconds": 5.89704520000123,
+      "passed": 130,
+      "skipped": 132,
+      "warnings": 0
+    },
+    {
+      "name": "compileall",
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "transformer_opt",
+        "benchmarks",
+        "tests",
+        "tools"
+      ],
+      "environment": {},
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992",
+      "exit_code": 0,
+      "duration_seconds": 0.10318499999993946
+    }
+  ],
+  "tooling_and_test_normalized_text_sha256": {
+    "benchmarks/compare_rounded_attention.py": "015600b2b37766cbd691814651401bc26f1f4c11c1a446b5a458b649eb5a1080",
+    "benchmarks/compare_attention_precision.py": "aded50e57e6b7bca7c5488472b62d72b125f62090223e21e93aa8cb2e0593e0a",
+    "tests/test_rounded_attention.py": "126e0b0341331a6636b1bd960873b6a748bbe11a48464564a4aa07e7003da1f1",
+    "tests/test_profile_cases.py": "97c2935d0b4617b3d93a374fbce566129cc6df605f67b44c1b36d3dd2b83be30",
+    "tests/test_publication_evidence.py": "f13340f4a8ea9835c8207edf4ba38fe7099f3768898eb697b0fbb0a7177562be"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-final.json",
+      "sha256": "4c1e3595427ba45aecea7f9b9f2c880b0cbaa5abd7081ef41039e6220f111e7d",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-final-confirmation.json",
+      "sha256": "2710878cc62ea5322c4c14947be7bb0c608b6e3d4d806be9a432bbafee7349c0",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-graph-ab.json",
+      "sha256": "c7739fa99d07da5f7140d9bfbb623bbbe875e5f9f9d04897a87255406ddd69d1",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-rounded-ab.json",
+      "sha256": "9c7141ea189157f0e4e99c1007cefd5781a06f7a110e3429978e1571bc33fe56",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-rounded-auto-ab.json",
+      "sha256": "81c78b305fe60573bb5f419f6817719fe4f1e8d4efb0aff313ef1b94477c15b9",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-heldout.json",
+      "sha256": "62890a08a3ef70dfe47a11d5f37dd75567cc33b5d3c4c0375c1feaef2f182b1b",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-source-derived.json",
+      "sha256": "ce4e12d876ad760ce64c6dbd9fd17cfc60dae2c03de2a9b9e3356c14a26d77b4",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row05-profile.json",
+      "sha256": "1116513fada0cb3b47699202ef50a2c4c4927b98ba68ae779ecddd145ded15a2",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row06-profile.json",
+      "sha256": "5a69bdf439df69a87806a078b2129b6932cf18cc8e85d86b90f051bc60d80b9e",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row07-profile.json",
+      "sha256": "577365bcab29efcf2fc02e5f6ca037eee5c8c2274ca38f43c9952953b5fa7784",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row09-profile.json",
+      "sha256": "4c3f281e3646e68545cd4c2cedd87c3cb177061363772f1e5b1133232dfcdb81",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row11-profile.json",
+      "sha256": "98bc8064370973ce517b6253c9a0816fb9f14c7577de8b01321d2a4b2f16af93",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row13-profile.json",
+      "sha256": "59e83cb069579844b980abca3f9269e1dbb062f73be2129cd9efbeb13b014846",
+      "implementation_sha256": "ec46e346b8ab259de4da6d5db7bb90c7235984b6ef52bfecf5f5a89357a94992"
+    }
+  ],
+  "rejected_experimental_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-wide-prototype-final.json",
+      "sha256": "ddc66603156625f7194f80bee75eaf4e3c10b4137d448d8e3e266870870b78df",
+      "selected": false
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-wide-prototype-final-confirmation.json",
+      "sha256": "2b6492b771a4058b1c5cc2ab5afc04d58c5c2d70586a5921f505c6e5a2c8afa3",
+      "selected": false
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-rejected-stress.json",
+      "sha256": "d26d9d506846ba676d32b8ed800d6b7870dde16ef7a9e5c0f67086f33a6d5262",
+      "selected": false
+    }
+  ],
+  "reference_checkout_integrity": {
+    "status": "PASS",
+    "sha256": {
+      "benchmarks/torch_transformer_benchmark.py": "5529c96a80799b51f68092e1444a30b17994554dffdf52da98ba701489a7f36e",
+      "benchmarks/tensorflow_transformer_benchmark.py": "00e99b6e1d19e961039b66eb3d3c055b36cc50f0436da2558f5f1fbe292ef798"
+    }
+  },
+  "pre_review_byte_integrity": [
+    {
+      "path": "results/c14-pre-review",
+      "checked_files": 11,
+      "status": "PASS"
+    },
+    {
+      "path": "results/c14-pre-availability",
+      "checked_files": 17,
+      "status": "PASS"
+    }
+  ],
+  "validation_summary": {
+    "final_pair": {
+      "passed_per_run": 13,
+      "authorized_resource_skip_per_run": 1,
+      "compared_elements_per_run": 938885120,
+      "failed_elements_per_run": 0,
+      "geometric_mean_speedups": [
+        4.976932780852108,
+        4.599836273935755
+      ]
+    },
+    "heldout": {
+      "passed": 7
+    },
+    "source_derived": {
+      "passed": 28,
+      "authorized_resource_skip": 1,
+      "compared_elements": 459776000,
+      "failed_elements": 0
+    },
+    "accepted_rounded_rows": [
+      2,
+      3,
+      7,
+      12
+    ],
+    "production_ab_median_ratios": {
+      "final-02-b1-d128-h4-s128": 1.1972307625296554,
+      "final-03-b4-d128-h4-s128": 1.2011927125909636,
+      "final-07-b64-d32-h4-s128": 1.5174302943549034,
+      "final-12-b64-d128-h4-s32": 1.2511254164656154
+    },
+    "profiler_expectations": {
+      "passed": 6,
+      "rows": [
+        5,
+        6,
+        7,
+        9,
+        11,
+        13
+      ],
+      "rounded_row7_kernel_events": [
+        {
+          "name": "_attention_fwd_rounded",
+          "count": 12,
+          "self_device_time_us": 109.53999999999814,
+          "cpu_time_total_us": 0.0
+        }
+      ]
+    }
+  },
+  "target": {
+    "metric": "13-row geometric-mean end-to-end speedup versus unchanged explicit PyTorch attention",
+    "requested": 10.0,
+    "achieved": false
+  },
+  "review": {
+    "roles": "Single primary agent; requirements, implementation, numerical QA, privacy, documentation and adversarial review perspectives. No delegated review claimed.",
+    "resolved_findings": [
+      "Corrected row-7 FFN guard from fixed 128 to equality with model width; final row-7 width is 32.",
+      "Profiler now recognizes both exact owned kernel names; substring decoy rejection remains tested.",
+      "New missing-Triton regression failed before the availability guard and passes afterward; optional fallback is preserved.",
+      "Git text normalization is disabled for raw-hashed docs/results JSON; organizer raw-byte protection remains."
+    ],
+    "test_changes": [
+      {
+        "reason": "C13 current-source assertions became historical after implementation changes.",
+        "replacement": "Fresh C14 source/sample/comparator tests plus immutable C13 artifact hash coverage.",
+        "reviewer": "Primary agent review",
+        "proof": "Current full suite and retained artifact identities."
+      },
+      {
+        "reason": "Broad rounded routes failed new quarter-scale tests and were removed from the implementation.",
+        "replacement": "Positive weight/scale/padding tests on the four retained shapes; negative guards for seven rejected shapes; permanent rejected-stress evidence.",
+        "reviewer": "Primary agent review",
+        "proof": "Rejected stress record and current full suite; no baseline comparator changes."
+      }
+    ]
+  },
+  "observed_failed_attempts": [
+    {
+      "kind": "docs-in-progress",
+      "result": "1 failed, 237 passed",
+      "reason": "README/result index still had the older source fingerprint; reconciled and retested."
+    },
+    {
+      "kind": "broad rounded stress",
+      "implementation_sha256": "8a28da5bacf6b78b40c29be802d8a177ed8dd755bb2ccf15c1105b3832fb8f54",
+      "result": "2 failed, 24 passed in initial focused test",
+      "reason": "619 large-batch and 2 head-16 quarter-scale failures; broader screen retained; rejected routes removed."
+    },
+    {
+      "kind": "profiler selection",
+      "result": "FAIL",
+      "reason": "Exact-name selector recognized only the old real kernel; fixed with explicit second name and regression coverage."
+    },
+    {
+      "kind": "PowerShell wrapper",
+      "result": "FAIL",
+      "reason": "Native stderr status text became a terminating NativeCommandError; subsequent runs retain stderr and check exit codes."
+    },
+    {
+      "kind": "missing dependency regression",
+      "result": "1 failed before fix",
+      "reason": "Matched CUDA shape could select rounded policy with Triton absent; fixed and fully retested."
+    }
+  ],
+  "limitations": [
+    "10x aggregate target remains unmet; individual fast rows do not establish it.",
+    "The final table is measured under fp32, no-padding, input-scale-1 assumptions. Older routes fail additional quarter-scale tests with different weights; this pre-existing general accuracy issue remains deferred.",
+    "Only four SM120 rounded shapes passed the additional tested weight/scale/padding cases. This is not a universal numerical guarantee.",
+    "Wide-model near-parity/regression and workstation timing variability remain. The production-path A/B isolates gains; separate-process aggregate differences do not.",
+    "Broader 5.386x experimental result and 61.1 percent large-batch allocation reduction are rejected implementation evidence.",
+    "Capture/setup excluded; replay copies, output clones, signature checks and GPU work included. GPU work was run sequentially.",
+    "All work remains local and uncommitted; no branch, push, deployment or external publication."
+  ],
+  "hygiene": {
+    "command": [
+      "python",
+      "tools/check_publication.py"
+    ],
+    "exit_code": 0,
+    "checked_candidates": 1226,
+    "findings": 0,
+    "scope": "Local Markdown links and common credential patterns; not a comprehensive security audit."
+  }
+}

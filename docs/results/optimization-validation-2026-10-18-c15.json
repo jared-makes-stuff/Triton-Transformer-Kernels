@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "record_type": "observed local optimization validation",
+  "status": "COMPLETE",
+  "date_local": "2026-10-18",
+  "timezone": "Asia/Singapore",
+  "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4",
+  "tests": [
+    {
+      "name": "tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "environment": {},
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4",
+      "exit_code": 0,
+      "duration_seconds": 35.908263199999055,
+      "passed": 290,
+      "warnings": 14
+    },
+    {
+      "name": "cpu-tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4",
+      "exit_code": 0,
+      "duration_seconds": 5.048993199998222,
+      "passed": 136,
+      "skipped": 154
+    },
+    {
+      "name": "compileall",
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "transformer_opt",
+        "benchmarks",
+        "tests",
+        "tools"
+      ],
+      "environment": {},
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4",
+      "exit_code": 0,
+      "duration_seconds": 0.09290769999643089
+    },
+    {
+      "name": "final-provenance",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_publication_evidence.py",
+        "tests/test_inference_experiments.py",
+        "-q"
+      ],
+      "environment": {},
+      "exit_code": 0,
+      "duration_seconds": 1.7661487000004854,
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4",
+      "passed": 24
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-final.json",
+      "sha256": "623ffda64ae729a2a7f681d077c7cccb28a16197e8624ce66831ffe572646a69",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-final-confirmation.json",
+      "sha256": "52cc3e7f2b5b1a21658c1ef56759061424be280f6dda4de0c5cf1b6838761e03",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-norm-ab.json",
+      "sha256": "42cf539f0cfd0b5e2fe76c145d38bc3423c74f4f61f20935caf51c452a4fd298",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-graph-ab.json",
+      "sha256": "6c8965b474b1227ce7c5c22e143542aaf08580404d1f6294f7cbbe19c295e73b",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-heldout.json",
+      "sha256": "0fff46b62280f30ea46e1c06f4617f9bf11093c766c1ec4ad4242e5b3968f974",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-source-derived.json",
+      "sha256": "37bfd18365aa07afe8420048f8ce5e91f86ed381b26a884d715dc70bddad6c66",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row05-profile.json",
+      "sha256": "3626daaebd524795832868dc116038bab28592ccf3a61bb5bece0ea95b849beb",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row06-profile.json",
+      "sha256": "9238bd330391d05e493424a074154741788803d8727a5fed953ef5a78277a391",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row07-profile.json",
+      "sha256": "b46fe9bd9f786f8510350dac235df506741f20ba73f339b6090705dbf2e1372b",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row09-profile.json",
+      "sha256": "0061b901c8b51f30818b61d9d4c0c7361aa35331b7b22aecda03828b6d401ede",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row11-profile.json",
+      "sha256": "f2d3c2c3f2514d557ef6aa8495b1566e6d26bae626a9e4889760a92b1cce0e13",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-row13-profile.json",
+      "sha256": "dce597c0a3186b07818773c7715f363624e6207b5276b0cf5d515d0a9a9bfef3",
+      "implementation_sha256": "eb4217f4a589e66d150cfe3ce36d1eacc4eded4d308984bf5b62e1ed7ed764f4"
+    }
+  ],
+  "research_artifacts": [
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c15-component-screens.json",
+      "sha256": "7246e75bb89c3c82484e4ade558364895c8370b1e47ab81e079ca6bfaee2a5b6",
+      "selected_production_evidence": false,
+      "screens": 9,
+      "embedded_exact_source_versions": 4
+    }
+  ],
+  "preserved_campaign14_artifacts": [
+    {
+      "path": "docs/results/optimization-validation-2026-10-18-c14.json",
+      "sha256": "9ea6e0860f3a8d10be8daba3dfb46fc054f668d1829c3810c93664090edc750c"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-final-confirmation.json",
+      "sha256": "2710878cc62ea5322c4c14947be7bb0c608b6e3d4d806be9a432bbafee7349c0"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-final.json",
+      "sha256": "4c1e3595427ba45aecea7f9b9f2c880b0cbaa5abd7081ef41039e6220f111e7d"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-graph-ab.json",
+      "sha256": "c7739fa99d07da5f7140d9bfbb623bbbe875e5f9f9d04897a87255406ddd69d1"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-heldout.json",
+      "sha256": "62890a08a3ef70dfe47a11d5f37dd75567cc33b5d3c4c0375c1feaef2f182b1b"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-rejected-stress.json",
+      "sha256": "d26d9d506846ba676d32b8ed800d6b7870dde16ef7a9e5c0f67086f33a6d5262"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-rounded-ab.json",
+      "sha256": "9c7141ea189157f0e4e99c1007cefd5781a06f7a110e3429978e1571bc33fe56"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-rounded-auto-ab.json",
+      "sha256": "81c78b305fe60573bb5f419f6817719fe4f1e8d4efb0aff313ef1b94477c15b9"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row05-profile.json",
+      "sha256": "1116513fada0cb3b47699202ef50a2c4c4927b98ba68ae779ecddd145ded15a2"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row06-profile.json",
+      "sha256": "5a69bdf439df69a87806a078b2129b6932cf18cc8e85d86b90f051bc60d80b9e"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row07-profile.json",
+      "sha256": "577365bcab29efcf2fc02e5f6ca037eee5c8c2274ca38f43c9952953b5fa7784"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row09-profile.json",
+      "sha256": "4c3f281e3646e68545cd4c2cedd87c3cb177061363772f1e5b1133232dfcdb81"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row11-profile.json",
+      "sha256": "98bc8064370973ce517b6253c9a0816fb9f14c7577de8b01321d2a4b2f16af93"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-row13-profile.json",
+      "sha256": "59e83cb069579844b980abca3f9269e1dbb062f73be2129cd9efbeb13b014846"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-source-derived.json",
+      "sha256": "ce4e12d876ad760ce64c6dbd9fd17cfc60dae2c03de2a9b9e3356c14a26d77b4"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-wide-prototype-final-confirmation.json",
+      "sha256": "2b6492b771a4058b1c5cc2ab5afc04d58c5c2d70586a5921f505c6e5a2c8afa3"
+    },
+    {
+      "path": "docs/results/rtx-5070-ti-2026-10-18-c14-wide-prototype-final.json",
+      "sha256": "ddc66603156625f7194f80bee75eaf4e3c10b4137d448d8e3e266870870b78df"
+    }
+  ],
+  "reference_checkout_integrity": {
+    "status": "PASS",
+    "sha256": {
+      "benchmarks/torch_transformer_benchmark.py": "5529c96a80799b51f68092e1444a30b17994554dffdf52da98ba701489a7f36e",
+      "benchmarks/tensorflow_transformer_benchmark.py": "00e99b6e1d19e961039b66eb3d3c055b36cc50f0436da2558f5f1fbe292ef798"
+    }
+  },
+  "tooling_and_test_normalized_text_sha256": {
+    "benchmarks/compare_short_layer_norm.py": "86b5ac3a6b1c4a8034e0357e11b59fe72d2bba66303ac1715bf6cc16849781cf",
+    "benchmarks/experiments/c15_components.py": "05961c2ebb50c7a0a59b20c1446b48d831f6f8f085d860762a1f04e380faa1b5",
+    "benchmarks/experiments/c15_screen.py": "bbf7c7d3d73aa8d5dff686cccc8a49226b03520a78f45a5ffe60667cc29fbcde",
+    "tests/test_short_layer_norm.py": "e136755fd65958706e9560ef623ef5be03ad3d5f47441c9541784e291a6ea475",
+    "tests/test_publication_evidence.py": "2d98768a664fb35ef0dfbac9bd5ea0be5dae2965682d899e6cffd84888801a92",
+    "tests/test_inference_experiments.py": "3c38649c326f44abb116b1e190e8036f667c5ba8046f2a8bfbac67787e0f38af"
+  },
+  "validation_summary": {
+    "final_pair": {
+      "passed_per_run": 13,
+      "authorized_resource_skip_per_run": 1,
+      "compared_elements_per_run": 938885120,
+      "failed_elements_per_run": 0,
+      "geometric_mean_speedups": [
+        3.911726642889496,
+        3.7978823858239235
+      ]
+    },
+    "heldout": {
+      "passed": 7
+    },
+    "source_derived": {
+      "passed": 28,
+      "authorized_resource_skip": 1,
+      "compared_elements": 459776000,
+      "failed_elements": 0
+    },
+    "accepted_shape": {
+      "final_row": 7,
+      "batch": 64,
+      "sequence": 128,
+      "model_width": 32,
+      "heads": 4,
+      "ffn_width": 32,
+      "layers": 4,
+      "causal": true
+    },
+    "normalization_ab": {
+      "accuracy_trials": 8,
+      "bitwise_equal_to_prior_route": true,
+      "raw_samples_per_variant": 320,
+      "rounds": 4,
+      "whole_model_control_over_candidate": 1.3447544573070493,
+      "per_round_ratios": [
+        1.3242570402374731,
+        1.3447544573070493,
+        1.3518123289571204,
+        1.3697856015547532
+      ]
+    },
+    "profiler_expectations": {
+      "passed": 6,
+      "rows": [
+        5,
+        6,
+        7,
+        9,
+        11,
+        13
+      ],
+      "short_norm_launches_in_three_row7_forwards": 27
+    },
+    "figure": {
+      "path": "docs/assets/final-speedups.svg",
+      "status": "regenerated and visually inspected",
+      "sha256": "b4f6fdcf89a5f24996b1d2d8809dc9a7cf95052d76fa1519fd9646c577af85af",
+      "plot_dependencies": "Existing isolated results/plot-deps; runtime dependencies unchanged"
+    }
+  },
+  "target": {
+    "metric": "13-row geometric-mean end-to-end speedup versus unchanged explicit PyTorch attention",
+    "requested": 10.0,
+    "achieved": false
+  },
+  "review": {
+    "roles": "Primary agent sequential requirements, architecture, implementation, QA, privacy, documentation and adversarial review; no delegated review claimed.",
+    "decisions": [
+      "Accept only exact row-7 Welford normalization after bitwise model/direct gates and whole-forward A/B.",
+      "Keep vendor linears: fused exact-GELU screens showed no consistent material gain.",
+      "Reject larger reference chunks at stress gate; they reproduce 560 pre-existing failures.",
+      "Reject two-pass normalization despite normal-seed passes; different-weight quarter-scale errors are retained.",
+      "Global hooks disable graph replay and preserve ordinary module observers.",
+      "Separate current and historical evidence; do not attribute cross-process aggregate movement causally."
+    ],
+    "test_changes": [
+      {
+        "reason": "C14 current-source assertions became historical after C15 normalization changes.",
+        "replacement": "Fresh C15 complete/replay/normalization/profiler evidence plus immutable C14 hash coverage.",
+        "reviewer": "Primary agent review",
+        "proof": "Passing full suites and final focused provenance/CLI checks."
+      },
+      {
+        "reason": "New component evidence needed standalone source provenance and permanent rejection accounting.",
+        "replacement": "Embedded exact source versions with SHA checks, failed-stress/no-timing assertions, and old-route equality coverage.",
+        "reviewer": "Primary agent review",
+        "proof": "24 passing final focused provenance/CLI checks; added after full suites."
+      }
+    ],
+    "scope": "Two production Python files changed; no new runtime dependency, parameter/state-dict key, comparator change, or skip."
+  },
+  "observed_nonpassing_checks": [
+    {
+      "kind": "candidate numerical screen",
+      "result": "REJECTED_ACCURACY",
+      "detail": "Naive normalization and larger chunk routes failed stronger stress; all records preserved."
+    },
+    {
+      "kind": "initial plot command",
+      "result": "ModuleNotFoundError: matplotlib",
+      "resolution": "Used the pre-existing isolated results/plot-deps; no runtime dependency changes."
+    },
+    {
+      "kind": "initial publication check",
+      "result": "2 broken-local-link findings",
+      "resolution": "Links pointed to the not-yet-written C15 validation record; seal and recheck."
+    },
+    {
+      "kind": "interrupted first regression process",
+      "result": "No result claimed",
+      "resolution": "Confirmed no remaining process and reran the full recorded checks."
+    }
+  ],
+  "limitations": [
+    "10x aggregate target remains unmet. Current pair is 3.798-3.912x; historical C14 pair is 4.600-4.977x.",
+    "Only same-process A/B isolates the 1.345x row-7 gain; baseline and workstation timing vary between campaigns.",
+    "The accepted guard is exact, hardware-specific, forward inference only; no universal precision or performance guarantee.",
+    "Older routes retain different-weight quarter-scale failures. No general numerical root cause or repair is claimed.",
+    "The 100000-token resource row is an authorized non-pass skip.",
+    "Setup/capture excluded; copies, clones, checks and GPU work included. All GPU jobs executed sequentially.",
+    "Local uncommitted work only; no branch, commit, push, release, deployment, publication or durable external memory write."
+  ],
+  "hygiene": {
+    "command": [
+      "python",
+      "tools/check_publication.py"
+    ],
+    "exit_code": 0,
+    "checked_candidates": 1245,
+    "findings": 0,
+    "scope": "Local links and common credential patterns; not a comprehensive security audit."
+  }
+}
