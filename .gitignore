@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+/results/
+.DS_Store
+*:Zone.Identifier
+colab_bundle.zip
+# Local credentials, profiler exports, editor state, and packaging output.
+.env
+.env.*
+!.env.example
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+build/
+dist/
+*.pt.trace.json
+*.nsys-rep
+*.ncu-rep

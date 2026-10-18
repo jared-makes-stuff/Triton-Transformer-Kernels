@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Preserve the organizer downloads' raw checksums on every checkout platform.
+benchmarks/torch_transformer_benchmark.py -text
+benchmarks/tensorflow_transformer_benchmark.py -text
+# Retained evidence manifests hash raw bytes, including their original newlines.
+docs/results/*.json -text
+# The compiler wrapper is executed by bash in Linux/WSL checkouts.
+tools/triton-cc text eol=lf
