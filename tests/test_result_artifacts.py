@@ -261,7 +261,7 @@ def test_selected_submission_attempts_bind_results_to_measured_fingerprint():
         assert attempt["metrics"]["status"] == "PASS"
 
 
-def test_submission_docs_select_campaign11_evidence_and_disclose_removed_regressions():
+def test_evidence_docs_preserve_historical_and_current_provenance():
     current_fingerprint, _ = implementation_fingerprint()
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     requirements = (ROOT / "docs" / "REQUIREMENTS.md").read_text(encoding="utf-8")
@@ -277,14 +277,15 @@ def test_submission_docs_select_campaign11_evidence_and_disclose_removed_regress
 
     assert all(
         CAMPAIGN11_EVIDENCE_FINGERPRINT in text
-        for text in (readme, requirements, result_index)
+        for text in (requirements, result_index)
     )
     assert all(
-        current_fingerprint in text for text in (readme, requirements, result_index)
+        current_fingerprint in text for text in (requirements, result_index)
     )
     for artifact in SUBMISSION_ATTEMPT_RESULT_MAP.values():
         assert artifact.name in result_index
-    assert FINAL_EVALUATOR_PATH.name in readme
+    assert "](docs/results/README.md)" in readme
+    assert "](docs/REQUIREMENTS.md)" in readme
     assert FINAL_EVALUATOR_PATH.name in implementation_evidence
     assert ORGANIZER_DEFAULT_PATH.name in implementation_evidence
     assert ORGANIZER_VALIDATION_PATH.name in implementation_evidence
